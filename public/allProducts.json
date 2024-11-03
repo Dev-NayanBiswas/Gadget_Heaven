@@ -1,0 +1,215 @@
+[
+    {
+      "laptops": [
+        {
+          "product_id": "8b1f1e02-60be-49d5-8c67-9fcb1d6c4bb4",
+          "product_title": "Dell XPS 13",
+          "product_image": "dell_xps13.png",
+          "category": "laptops",
+          "price": 999.99,
+          "description": "Compact laptop with 13-inch display and high-end specs.",
+          "Specification": ["Intel Core i7", "16GB RAM", "512GB SSD"],
+          "availability": true,
+          "rating": 4.8
+        },
+        {
+          "product_id": "dc67c9c4-0bfc-45ef-b998-d543b1a8c254",
+          "product_title": "HP Spectre x360",
+          "product_image": "hp_spectre.png",
+          "category": "laptops",
+          "price": 1249.99,
+          "description": "Versatile 2-in-1 laptop with stunning design.",
+          "Specification": ["Intel Core i5", "8GB RAM", "256GB SSD"],
+          "availability": false,
+          "rating": 4.5
+        },
+        {
+          "product_id": "32bf18b3-26d1-4a5b-874a-b9e2c597f73a",
+          "product_title": "MacBook Air",
+          "product_image": "macbook_air.png",
+          "category": "laptops",
+          "price": 1099.99,
+          "description": "Lightweight and powerful laptop by Apple.",
+          "Specification": ["Apple M1 chip", "8GB RAM", "256GB SSD"],
+          "availability": true,
+          "rating": 4.9
+        }
+      ],
+      "phones": [
+        {
+          "product_id": "abc45def-678g-90hi-jkl1-mn234opqr567",
+          "product_title": "Samsung Galaxy S21",
+          "product_image": "samsung_s21.png",
+          "category": "phones",
+          "price": 799.99,
+          "description": "Flagship smartphone with an impressive camera.",
+          "Specification": ["Snapdragon 888", "8GB RAM", "128GB Storage"],
+          "availability": true,
+          "rating": 4.6
+        },
+        {
+          "product_id": "fgh89ijk-2345-l678-mnop-qrstuvwx90yz",
+          "product_title": "Google Pixel 6",
+          "product_image": "pixel_6.png",
+          "category": "phones",
+          "price": 699.99,
+          "description": "Google's newest flagship phone with the latest AI features.",
+          "Specification": ["Google Tensor", "8GB RAM", "128GB Storage"],
+          "availability": true,
+          "rating": 4.7
+        },
+        {
+          "product_id": "ijkl0123-4567-mnop-qrst-uvwx5678yzab",
+          "product_title": "OnePlus 9",
+          "product_image": "oneplus_9.png",
+          "category": "phones",
+          "price": 729.99,
+          "description": "Affordable flagship with a smooth display.",
+          "Specification": ["Snapdragon 888", "12GB RAM", "256GB Storage"],
+          "availability": false,
+          "rating": 4.5
+        }
+      ],
+      "accessories": [
+        {
+          "product_id": "mn01opqr-2345-stuv-wxyz-abcdef567890",
+          "product_title": "Sony WH-1000XM4 Headphones",
+          "product_image": "sony_wh1000xm4.png",
+          "category": "accessories",
+          "price": 349.99,
+          "description": "Noise-canceling over-ear headphones with premium sound quality.",
+          "Specification": ["Noise Cancellation", "30-hour battery life"],
+          "availability": true,
+          "rating": 4.8
+        },
+        {
+          "product_id": "pqrs0123-4567-tuvx-wxyz-abcdef5678uv",
+          "product_title": "Anker PowerCore 10000",
+          "product_image": "anker_powercore.png",
+          "category": "accessories",
+          "price": 29.99,
+          "description": "Compact portable charger with fast charging support.",
+          "Specification": ["10000mAh", "USB-C PD"],
+          "availability": true,
+          "rating": 4.7
+        },
+        {
+          "product_id": "xyza5678-1234-bcde-fghi-jklmnopqrst",
+          "product_title": "Logitech MX Master 3",
+          "product_image": "logitech_mx_master_3.png",
+          "category": "accessories",
+          "price": 99.99,
+          "description": "Ergonomic wireless mouse with customizable buttons.",
+          "Specification": ["Advanced Scroll Wheel", "Bluetooth and USB connectivity"],
+          "availability": true,
+          "rating": 4.8
+        }
+      ],
+      "smart_watches": [
+        {
+          "product_id": "1234abc5-def6-ghij-789k-lmnop0123456",
+          "product_title": "Apple Watch Series 7",
+          "product_image": "apple_watch_series7.png",
+          "category": "smart_watches",
+          "price": 399.99,
+          "description": "Latest Apple Watch with larger display and fast charging.",
+          "Specification": ["Blood Oxygen Monitor", "GPS", "Water Resistant"],
+          "availability": true,
+          "rating": 4.9
+        },
+        {
+          "product_id": "abcd0123-efgh-ijkl-4567-mnopqrstuvwx",
+          "product_title": "Samsung Galaxy Watch 4",
+          "product_image": "galaxy_watch4.png",
+          "category": "smart_watches",
+          "price": 249.99,
+          "description": "Smartwatch with health tracking and Wear OS.",
+          "Specification": ["Heart Rate Monitor", "Sleep Tracking"],
+          "availability": true,
+          "rating": 4.7
+        },
+        {
+          "product_id": "fghijk45-lmno-pqrs-6789-tuvwxyz01234",
+          "product_title": "Fitbit Charge 5",
+          "product_image": "fitbit_charge5.png",
+          "category": "smart_watches",
+          "price": 129.99,
+          "description": "Fitness tracker with health monitoring features.",
+          "Specification": ["ECG Monitor", "Stress Management"],
+          "availability": true,
+          "rating": 4.6
+        }
+      ],
+      "macBooks": [
+        {
+          "product_id": "mnopqr01-2345-stuv-wxyz-abcdef012345",
+          "product_title": "MacBook Pro 14-inch",
+          "product_image": "macbook_pro_14.png",
+          "category": "macBooks",
+          "price": 1999.99,
+          "description": "High-performance laptop for professionals.",
+          "Specification": ["M1 Pro Chip", "16GB RAM", "512GB SSD"],
+          "availability": true,
+          "rating": 4.9
+        },
+        {
+          "product_id": "qrstuv23-4567-wxyz-8901-abcdef234567",
+          "product_title": "MacBook Pro 16-inch",
+          "product_image": "macbook_pro_16.png",
+          "category": "macBooks",
+          "price": 2499.99,
+          "description": "Large-screen laptop with impressive battery life.",
+          "Specification": ["M1 Max Chip", "32GB RAM", "1TB SSD"],
+          "availability": false,
+          "rating": 5.0
+        },
+        {
+          "product_id": "uvwxyz45-6789-abcd-0123-efghijkl6789",
+          "product_title": "MacBook Air M2",
+          "product_image": "macbook_air_m2.png",
+          "category": "macBooks",
+          "price": 1199.99,
+          "description": "Portable and efficient laptop with M2 chip.",
+          "Specification": ["M2 Chip", "8GB RAM", "256GB SSD"],
+          "availability": true,
+          "rating": 4.8
+        }
+      ],
+      "iPhones": [
+        {
+          "product_id": "ijklmn01-2345-opqr-stuv-wxyzabcdef12",
+          "product_title": "iPhone 13",
+          "product_image": "iphone_13.png",
+          "category": "iPhones",
+          "price": 799.99,
+          "description": "Latest model with advanced camera and A15 chip.",
+          "Specification": ["A15 Bionic", "5G", "Dual-camera"],
+          "availability": true,
+          "rating": 4.9
+        },
+        {
+          "product_id": "mnopqr23-4567-stuv-wxyz-abcd01234567",
+          "product_title": "iPhone 12",
+          "product_image": "iphone_12.png",
+          "category": "iPhones",
+          "price": 699.99,
+          "description": "Previous generation with 5G support and great performance.",
+          "Specification": ["A14 Bionic", "5G", "OLED Display"],
+          "availability": true,
+          "rating": 4.7
+        },
+        {
+          "product_id": "qrstuv45-6789-wxyz-0123-abcd456789ef",
+          "product_title": "iPhone SE (2022)",
+          "product_image": "iphone_se.png",
+          "category": "iPhones",
+          "price": 429.99,
+          "description": "Compact iPhone with powerful A15 chip.",
+          "Specification": ["A15 Bionic", "4.7-inch Retina", "Touch ID"],
+          "availability": true,
+          "rating": 4.6
+        }
+      ]
+    }
+]
+  

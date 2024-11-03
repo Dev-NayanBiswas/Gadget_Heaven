@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base{
+  :root{
+    --primary-color:#9538E2;
+  }
+}
+
+@layer components{
+  h6{
+    font-weight: bold;
+    color: gray;
+  }
+  nav{
+    font-size: 0.8rem;
+    color: gray;
+  }
+}
+
+@layer utilities{
+
+  .btn_primary{
+    @apply px-10 py-2 text-lg rounded-e-full rounded-s-full btn_anim font-semibold
+  }
+
+  .homeNav{
+    @apply bg-[var(--primary-color)] text-xl text-white px-3 rounded-tr-2xl rounded-tl-2xl
+  }
+  .otherNav{
+    @apply px-3 bg-white text-gray-900/45 text-xl
+  }
+  
+  .btn_anim{
+    @apply active:translate-y-1 hover:bg-opacity-95 hover:animate-pulse transition-all duration-200
+  }
+
+  .active{
+    @apply bg-purple-800/85 px-6 py-2 text-sm rounded-e-full rounded-s-full btn_anim text-white
+  }
+  .inactive{
+    @apply px-6 py-2 text-sm rounded-e-full rounded-s-full btn_anim
+  }
+
+  .sideActive{
+    @apply bg-purple-800/85 px-6 py-2 text-sm rounded-e-full rounded-s-full btn_anim text-white
+  }
+
+  .sideInactive{
+    @apply bg-gray-200/85 px-6 py-2 text-sm rounded-e-full rounded-s-full btn_anim text-gray-900 shadow-sm
+  }
+
+  .dashNavAc{
+    @apply   bg-white border-transparent border-[1px] text-[var(--primary-color)] btn_primary
+  }
+  .dashNavIn{
+    @apply  border-white border-[1px] text-white btn_primary 
+  }
+  
+}
