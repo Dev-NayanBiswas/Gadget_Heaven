@@ -88,7 +88,7 @@ export default function MyBarChart() {
     const CustomLegend = ({ payload }) => (
         <ul style={{ listStyleType: 'none', padding: 0, display: 'flex', alignItems: 'center', gap:10, justifyContent:'center' }}>
             {
-            payload && payload.map((elem, index) => (
+            Array.isArray(payload) && payload?.map((elem, index) => (
                 <li key={index} style={{ display: 'flex', alignItems: 'center', marginBottom: 5 }}>
                     <span 
                         style={{

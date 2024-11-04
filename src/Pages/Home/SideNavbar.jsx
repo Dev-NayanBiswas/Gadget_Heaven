@@ -12,7 +12,7 @@ function SideNavbar({categories}) {
                 <nav className="grid grid-cols-1 gap-4 w-[170px] h-fit">
                     <NavLink className={({isActive})=>isActive? "sideActive":"sideInactive"}  to="/">All Products</NavLink>
                     {
-                      allCategories && allCategories.map((category)=><NavLink key={crypto.randomUUID()} className={({isActive})=>isActive? "sideActive":"sideInactive"} to={`/productCards/${category}`}>{category}</NavLink>)
+                      Array.isArray(allCategories) && allCategories?.map((category)=><NavLink key={crypto.randomUUID()} className={({isActive})=>isActive? "sideActive":"sideInactive"} to={`/productCards/${category}`}>{category}</NavLink>)
                     }
                 </nav>
             </section>
