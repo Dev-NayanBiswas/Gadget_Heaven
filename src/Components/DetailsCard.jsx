@@ -9,9 +9,9 @@ function DetailsCard() {
 
   const [product, setProduct] = useState({})
   const {ID} = useParams()
-  const data = useLoaderData() || [];
+  const data = useLoaderData();
   useEffect(()=>{
-    const flattingData = data.flatMap(category => category.items) ;
+    const flattingData = Array.isArray(data) && data.flatMap(category => category.items) || [];
     const seekingProduct = flattingData.find(product => product.product_id === ID);
     setProduct({...seekingProduct});
     // console.log(product);
