@@ -15,7 +15,7 @@ function Banner() {
             </section>
             </section>
         </section>
-            <div className="h-[27vh] bg-green-700"></div>
+            <div className="h-[27vh]"></div>
     </>
   )
 }

@@ -1,12 +1,16 @@
 import useTitle from '../../../public/Scripts/useTitle'
+import MyBarChart from '../../Components/BarChart'
+import SimpleBanner from '../../Components/SimpleBanner'
 
 function Statics() {
     useTitle("Statistics")
   return (
     <>
-      <section className="h-[30vh] w-full bg-[var(--primary-color)] py-7 flex flex-col justify-center items-center gap-6">
-            <h1 className="text-white text-center text-3xl font-semibold">Statistics</h1>
-            <p className="w-5/12 mx-auto text-sm text-center my-3 text-white">Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!</p>
+      <section className="w-full py-7">
+            <SimpleBanner title={"Statics"}/>
+        </section>
+        <section className="flex justify-center items-center">
+          <MyBarChart/>
         </section>
     </>
   )

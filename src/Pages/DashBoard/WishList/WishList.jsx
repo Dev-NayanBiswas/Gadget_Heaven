@@ -1,10 +1,9 @@
-import SmallNav from "../../Components/SmallNav"
 
 function WishList(){
     
   return (
     <>
-    <SmallNav/>
+      WishList
     </>
   )
 }

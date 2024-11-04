@@ -1,10 +1,14 @@
-import { Outlet } from "react-router-dom"
+import { Outlet, useOutletContext} from "react-router-dom"
 import useTitle from "../../../public/Scripts/useTitle"
 import Banner from "../../Components/Banner"
 import SideNavbar from "./SideNavbar"
 
+
 function Home() {
     useTitle("Home")
+    const [outletData] = useOutletContext();
+    const flatData = outletData.flatMap(data=>data.items)
+
   return (
     <>
         <section className="">
@@ -14,10 +18,10 @@ function Home() {
             <h1 className="text-center text-[#0B0B0B] font-bold text-4xl my-10">Explore Cutting-Edge Gadgets</h1>
             <section className="flex gap-5">
                 <section className="">
-                <SideNavbar/>
+                <SideNavbar categories={outletData} />
                 </section>
-                <section className="flex-1 bg-gray-600/45 rounded-lg">
-                    <Outlet/>
+                <section className="flex-1 rounded-lg">
+                    <Outlet context={[flatData]}/>
                 </section>
             </section>
         </section>

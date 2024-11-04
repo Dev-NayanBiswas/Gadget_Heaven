@@ -4,6 +4,7 @@ import { BsCart3 } from "react-icons/bs";
 
 function Navbar() {
   const location = useLocation();
+  const item = [1,2];
 
   const pathsArray = ["/","/allProducts","/laptops","/phones","/accessories","/smartWatches","/macBook","/iPhone"]
 
@@ -31,11 +32,13 @@ function Navbar() {
 
         <div className='navbar-end pr-5'>
           <section className="flex justify-center items-center gap-5">
-          <Link to="/dashboard/cart" className="btn_anim p-2 rounded-full bg-white/65 shadow-inset-lg text-black">
+          <Link to="/dashboard/cart" className="relative btn_anim p-2 rounded-full bg-white/65 shadow-inset-lg text-black">
           <BsCart3/>
+          {item.length && <span className="absolute -top-2 -right-2 text-sm w-5 h-5 text-white bg-red-500 rounded-full p-1 flex justify-center items-center">0</span>}
           </Link>
-          <Link to="/dashboard/wishList" className="btn_anim p-2 rounded-full bg-white/65 shadow-inset-lg text-black">
-          <GoHeart className=""/>
+          <Link to="/dashboard/wishList" className="btn_anim p-2 rounded-full bg-white/65 shadow-inset-lg text-black relative">
+          <GoHeart/>
+          {item.length && <span className="absolute -top-2 -right-2 text-sm w-5 h-5 text-white bg-red-500 rounded-full p-1 flex justify-center items-center">0</span>}
           </Link>
           </section>
         </div>

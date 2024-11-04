@@ -1,19 +1,19 @@
-import { NavLink } from "react-router-dom"
+import { NavLink} from "react-router-dom"
 
-function SideNavbar() {
+function SideNavbar({categories}) {
+  
+  const allCategories = categories.map(item=>item.category);
+  
   return (
     <>
-    <section className="rounded-xl bg-gray-300/10 border-[1px]">
+    <section className="rounded-xl bg-gray-100/10 border-[1px]">
         <section className="">
             <section className="text-center  rounded-lg px-3 py-4">
                 <nav className="grid grid-cols-1 gap-4 w-[170px] h-fit">
                     <NavLink className={({isActive})=>isActive? "sideActive":"sideInactive"}  to="/">All Products</NavLink>
-                    <NavLink className={({isActive})=>isActive? "sideActive":"sideInactive"} to="/laptops">Laptops</NavLink>
-                    <NavLink className={({isActive})=>isActive? "sideActive":"sideInactive"} to="/phones">Phones</NavLink>
-                    <NavLink className={({isActive})=>isActive? "sideActive":"sideInactive"} to="/accessories">Accessories</NavLink>
-                    <NavLink className={({isActive})=>isActive? "sideActive":"sideInactive"}  to="/smartWatches">Smart Watches</NavLink>
-                    <NavLink className={({isActive})=>isActive? "sideActive":"sideInactive"}  to="/macBook">MacBook</NavLink>
-                    <NavLink className={({isActive})=>isActive? "sideActive":"sideInactive"} to="/iPhone">iPhone</NavLink>
+                    {
+                      allCategories && allCategories.map((category)=><NavLink key={crypto.randomUUID()} className={({isActive})=>isActive? "sideActive":"sideInactive"} to={`/productCards/${category}`}>{category}</NavLink>)
+                    }
                 </nav>
             </section>
         </section>
@@ -25,5 +25,4 @@ function SideNavbar() {
 export default SideNavbar
 
 
-//"allProducts","laptops","phones","accessories","smartWatches","macBook","iPhone"
-
+//"AllProducts","Laptops","Phones","Accessories","SmartWatches","MacBook","iPhone"
