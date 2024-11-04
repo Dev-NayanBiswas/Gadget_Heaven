@@ -12,7 +12,7 @@ function AllProducts() {
       <section className="mb-20">
       <section className="grid grid-cols-3 gap-10">
         {
-          flatData.slice(0,pageData).map((item)=><ItemCard key={crypto.randomUUID()} cardInfo={item}/>)
+          flatData && flatData.slice(0,pageData).map((item)=><ItemCard key={crypto.randomUUID()} cardInfo={item}/>)
         }
       </section>
       <section className="w-full text-center flex justify-between items-center gap-20">
