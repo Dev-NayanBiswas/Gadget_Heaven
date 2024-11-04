@@ -16,7 +16,7 @@ const routes = createBrowserRouter([
     {
         path:"/",
         element:<MainLayout/>,
-        loader:()=>fetch('../public/allCategories.json'),
+        loader:()=>fetch('../allCategories.json'),
         errorElement:<ErrorPage/>,
         children:[
             {
@@ -40,7 +40,7 @@ const routes = createBrowserRouter([
             },
             {
                 path:"detailsCard/:ID",
-                loader:()=>fetch('../public/allCategories.json'),
+                loader:()=>fetch('..allCategories.json'),
                 element:<DetailsCard/>
             },
             {
