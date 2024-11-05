@@ -40,7 +40,7 @@ const routes = createBrowserRouter([
             },
             {
                 path:"detailsCard/:ID",
-                loader:()=>fetch('..allCategories.json'),
+                loader:()=>fetch('../allCategories.json'),
                 element:<DetailsCard/>
             },
             {
