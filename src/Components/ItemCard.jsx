@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
-import imageURL from "../../public/Scripts/imageURL"
+import imageURL from "../Utils/Scripts/imageURL"
+
 
 function ItemCard({cardInfo}) {
 

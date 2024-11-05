@@ -1,5 +1,5 @@
 import {Outlet} from 'react-router-dom'
-import useTitle from '../../../public/Scripts/useTitle'
+import useTitle from '../../Utils/Scripts/useTitle'
 import SimpleBanner from '../../Components/SimpleBanner'
 
 function DashBoard() {

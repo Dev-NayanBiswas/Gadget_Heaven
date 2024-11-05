@@ -1,4 +1,4 @@
-import imageURL from "../../public/Scripts/imageURL"
+import imageURL from "../Utils/Scripts/imageURL"
 
 function Banner() {
   return (

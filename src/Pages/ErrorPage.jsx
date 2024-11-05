@@ -1,5 +1,5 @@
 import { useRouteError } from 'react-router-dom';
-import useTitle from '../../public/Scripts/useTitle';
+import useTitle from '../Utils/Scripts/useTitle';
 
 function ErrorPage() {
     useTitle("ErrorPage")

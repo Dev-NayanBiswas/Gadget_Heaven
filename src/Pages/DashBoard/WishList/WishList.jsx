@@ -1,3 +1,4 @@
+import DashCard from "../../../Components/DashCard"
 
 function WishList(){
     

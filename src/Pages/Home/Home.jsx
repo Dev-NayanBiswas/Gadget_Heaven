@@ -1,5 +1,5 @@
 import { Outlet, useOutletContext} from "react-router-dom"
-import useTitle from "../../../public/Scripts/useTitle"
+import useTitle from "../../Utils/Scripts/useTitle"
 import Banner from "../../Components/Banner"
 import SideNavbar from "./SideNavbar"
 

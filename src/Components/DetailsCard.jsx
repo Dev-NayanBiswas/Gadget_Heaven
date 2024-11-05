@@ -1,12 +1,15 @@
-import imageURL from "../../public/Scripts/imageURL";
+import imageURL from "../Utils/Scripts/imageURL";
 import { FaStar } from "react-icons/fa6";
 import { GoHeart } from "react-icons/go";
 import { BsCart3 } from "react-icons/bs";
 import { useLoaderData, useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { CartContext } from "../Utils/Context/AllContext";
+import useTitle from "../Utils/Scripts/useTitle";
 
 function DetailsCard() {
-
+  useTitle('Details')
+  const {cartManager} = useContext(CartContext);
   const [product, setProduct] = useState({})
   const {ID} = useParams()
   const data = useLoaderData();
@@ -16,7 +19,7 @@ function DetailsCard() {
     setProduct({...seekingProduct});
     // console.log(product);
   },[ID,data])
-
+  
 
       const {
         product_id,
@@ -28,7 +31,9 @@ function DetailsCard() {
         Specification,
         availability,
         rating
-    } = product || {}
+      } = product || {}
+      
+
 
 
   return (
@@ -48,7 +53,7 @@ function DetailsCard() {
         
           <section className="absolute bg-white/35 w-8/12 mx-auto rounded-2xl p-4 border-2 scale-y-95 top-[150%] -translate-x-1/2 -translate-y-1/2 left-1/2">
                 <section className="w-full h-[60vh] rounded-xl flex gap-4 bg-gray-50">
-                        <figure className="w-2/5 p-3">
+                        <figure className="w-3/5 p-3">
                         <img src={imageURL(product_image)} alt="vision pro" className="object-cover object-center w-full h-full rounded-xl" />
                         </figure>
                 <section className="w-3/5 flex flex-col justify-between py-3">
@@ -81,7 +86,7 @@ function DetailsCard() {
                     </section>
                     </div>
                         <section className="flex justify-start items-center gap-4">
-                            <button className="bg-[var(--primary-color)] text-white font-semibold btn_primary flex gap-2 justify-center items-center">Add to Cart<BsCart3 style={{fontSize:'1.2rem'}}/></button>
+                            <button onClick={()=>cartManager(product,"add")} className="bg-[var(--primary-color)] text-white font-semibold btn_primary flex gap-2 justify-center items-center">Add to Cart<BsCart3 style={{fontSize:'1.2rem'}}/></button>
 
                             <button className="btn_anim p-2 rounded-full text-gray-700 bg-green-100/45 border shadow-inset-lg">
                             <GoHeart style={{fontSize:'1.5rem'}}/>

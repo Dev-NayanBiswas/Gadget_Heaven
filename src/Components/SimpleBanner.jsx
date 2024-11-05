@@ -1,15 +1,30 @@
+import { useContext, useState } from "react";
 import { PiSortAscendingBold } from "react-icons/pi";
 import { NavLink, useLocation } from "react-router-dom";
+import { CartContext } from "../Utils/Context/AllContext";
+import Modal from "./Modal";
 
 function SimpleBanner({title}) {
-
+  const [showModal, setShowModal] = useState(false)
+  const {totalPrice,cart,cartManager, setCart} = useContext(CartContext)
   const location = useLocation();
     const path = location.pathname.split("/");
     const sectionHeader = path[path.length-1];
-  
-  
+
+      function handleSortAndPurchase(command){
+
+        if(command === "sort"){
+          const sortedData = cart&& cart?.toSorted((a,b)=>b.price - a.price);
+          setCart(sortedData);
+        }else{
+            setShowModal(!showModal)
+        }
+      }
     return (
     <>
+    {
+      showModal && <Modal taka={totalPrice} onClose={handleSortAndPurchase}/>
+    }
       <section className='h-[30vh] w-full flex flex-col justify-center gap-6 bg-[var(--primary-color)]'>
         <h1 className='text-white text-center text-3xl font-semibold'>
           {title}
@@ -49,14 +64,16 @@ function SimpleBanner({title}) {
             {location.pathname === "/dashboard/cart" && (
               <section className='buttons flex justify-center items-center gap-5'>
                 <h6 className='text-left text-gray-800/45 text-2xl'>
-                  Total Cost :
+                  Total Cost : $ {totalPrice}
                 </h6>
-                <button className='btn_primary flex items-center justify-center gap-3 text-[var(--primary-color)] border-[1px] border-[var(--primary-color)]'>
+                {cart && cart.length ? <button onClick={()=>handleSortAndPurchase("sort")} className='btn_primary flex items-center justify-center gap-3 text-[var(--primary-color)] border-[1px] border-[var(--primary-color)]'>
                   Sort By Price <PiSortAscendingBold className='text-xl' />
-                </button>
-                <button className='btn_primary text-white bg-[var(--primary-color)]'>
+                </button> : ""}
+                {
+                  cart && cart?.length ? <button onClick={handleSortAndPurchase} className='btn_primary text-white bg-[var(--primary-color)]'>
                   Purchase
-                </button>
+                </button> : ""
+                }
               </section>
             )}
           </section>

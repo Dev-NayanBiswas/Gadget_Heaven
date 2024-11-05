@@ -1,11 +1,13 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { GoHeart } from "react-icons/go";
 import { BsCart3 } from "react-icons/bs";
+import { useContext } from "react";
+import { CartContext } from "../Utils/Context/AllContext";
+
 
 function Navbar() {
   const location = useLocation();
-  console.log(location.pathname)
-  const item = [1,2];
+  const {totalPrice,cart,cartManager} = useContext(CartContext)
 
   const pathsArray = ["/","/productCards/Laptops","/productCards/iPhones","/productCards/Accessories","/productCards/SmartWatches","/productCards/MacBook","/productCards/Phones"]
 
@@ -35,11 +37,11 @@ function Navbar() {
           <section className="flex justify-center items-center gap-5">
           <Link to="/dashboard/cart" className="relative btn_anim p-2 rounded-full bg-white/65 shadow-inset-lg text-black">
           <BsCart3/>
-          {item.length && <span className="absolute -top-2 -right-2 text-sm w-5 h-5 text-white bg-red-500 rounded-full p-1 flex justify-center items-center">0</span>}
+          {cart?.length ? <span className="absolute -top-2 -right-2 text-sm w-5 h-5 text-white bg-red-500 rounded-full p-1 flex justify-center items-center">{cart.length}</span>:""}
           </Link>
           <Link to="/dashboard/wishList" className="btn_anim p-2 rounded-full bg-white/65 shadow-inset-lg text-black relative">
           <GoHeart/>
-          {item.length && <span className="absolute -top-2 -right-2 text-sm w-5 h-5 text-white bg-red-500 rounded-full p-1 flex justify-center items-center">0</span>}
+          <span className="absolute -top-2 -right-2 text-sm w-5 h-5 text-white bg-red-500 rounded-full p-1 flex justify-center items-center"></span>
           </Link>
           </section>
         </div>
