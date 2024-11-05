@@ -7,12 +7,7 @@ function ItemCard({cardInfo}) {
     product_id,
     product_title,
     product_image,
-    category,
-    price,
-    description,
-    Specification,
-    availability,
-    rating
+    price
 } = cardInfo || {}
 
 

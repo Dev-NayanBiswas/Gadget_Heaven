@@ -8,7 +8,7 @@ function ProductCards() {
   const{category} = useParams();
   const [flatData] = useOutletContext();
   useEffect(()=>{
-    const filteredCategory = Array.isArray(flatData) && flatData?.filter(items=>items.category === category);
+    const filteredCategory = flatData && flatData?.filter(items=>items.category === category);
     setSameCategory(filteredCategory);
     // console.log(sameCategory);
   },[category])
@@ -18,7 +18,7 @@ function ProductCards() {
     <section className="mb-20">
       <section className="grid grid-cols-3 gap-10">
             {
-              Array.isArray(sameCategory) && sameCategory?.map((item)=><ItemCard key={item.product_id} cardInfo={item}/>)
+              sameCategory && sameCategory?.map((item)=><ItemCard key={item.product_id} cardInfo={item}/>)
             }
       </section>
     </section>

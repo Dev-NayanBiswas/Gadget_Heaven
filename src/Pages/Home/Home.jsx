@@ -7,7 +7,7 @@ import SideNavbar from "./SideNavbar"
 function Home() {
     useTitle("Home")
     const [outletData] = useOutletContext();
-    const flatData = Array.isArray(outletData) && outletData.flatMap(data=>data.items) || [];
+    const flatData = outletData && outletData.flatMap(data=>data.items);
 
   return (
     <>

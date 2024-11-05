@@ -4,9 +4,10 @@ import { BsCart3 } from "react-icons/bs";
 
 function Navbar() {
   const location = useLocation();
+  console.log(location.pathname)
   const item = [1,2];
 
-  const pathsArray = ["/","/allProducts","/laptops","/phones","/accessories","/smartWatches","/macBook","/iPhone"]
+  const pathsArray = ["/","/productCards/Laptops","/productCards/iPhones","/productCards/Accessories","/productCards/SmartWatches","/productCards/MacBook","/productCards/Phones"]
 
   return (
     <>

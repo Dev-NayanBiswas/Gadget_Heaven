@@ -11,8 +11,8 @@ function DetailsCard() {
   const {ID} = useParams()
   const data = useLoaderData();
   useEffect(()=>{
-    const flattingData = Array.isArray(data) && data?.flatMap(category => category.items) || [];
-    const seekingProduct = flattingData.find(product => product.product_id === ID);
+    const flattingData =  data?.flatMap(category => category.items);
+    const seekingProduct = flattingData?.find(product => product.product_id === ID);
     setProduct({...seekingProduct});
     // console.log(product);
   },[ID,data])
@@ -63,7 +63,7 @@ function DetailsCard() {
                     <p className="text-gray-800 font-bold text-xl my-3">Specifications :</p>
                         <li className="text-gray-500/50 font-semibold">Intel Core i7</li>
                         {
-                          Array.isArray(Specification) && Specification?.map((item)=><li key={crypto.randomUUID()} className="text-gray-500/50 font-semibold">{item}</li>)
+                          Specification && Specification?.map((item)=><li key={crypto.randomUUID()} className="text-gray-500/50 font-semibold">{item}</li>)
                         }
                     </ol>
                     <div >
