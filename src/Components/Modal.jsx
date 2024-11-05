@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom"
 import imageURL from "../Utils/Scripts/imageURL"
 import { useContext } from "react";
-import { CartContext } from "../Utils/Context/AllContext";
+import { CartContext } from "../Utils/Context/allContext";
 
 function Modal({taka,onClose}){
     const {cart,setCart, setTotalPrice} = useContext(CartContext)

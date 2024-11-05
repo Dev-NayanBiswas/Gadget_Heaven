@@ -4,8 +4,8 @@ import { GoHeart } from "react-icons/go";
 import { BsCart3 } from "react-icons/bs";
 import { useLoaderData, useParams } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
-import { CartContext } from "../Utils/Context/AllContext";
 import useTitle from "../Utils/Scripts/useTitle";
+import { CartContext } from "../Utils/Context/allContext";
 
 function DetailsCard() {
   useTitle('Details')

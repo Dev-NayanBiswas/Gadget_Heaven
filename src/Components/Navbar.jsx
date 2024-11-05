@@ -2,7 +2,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { GoHeart } from "react-icons/go";
 import { BsCart3 } from "react-icons/bs";
 import { useContext } from "react";
-import { CartContext } from "../Utils/Context/AllContext";
+import { CartContext } from "../Utils/Context/allContext";
 
 
 function Navbar() {

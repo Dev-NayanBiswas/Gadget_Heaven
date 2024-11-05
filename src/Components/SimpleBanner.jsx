@@ -1,8 +1,8 @@
 import { useContext, useState } from "react";
 import { PiSortAscendingBold } from "react-icons/pi";
 import { NavLink, useLocation } from "react-router-dom";
-import { CartContext } from "../Utils/Context/AllContext";
 import Modal from "./Modal";
+import { CartContext } from "../Utils/Context/allContext";
 
 function SimpleBanner({title}) {
   const [showModal, setShowModal] = useState(false)

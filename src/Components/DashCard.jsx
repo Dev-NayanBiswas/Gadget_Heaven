@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { CgCloseO } from "react-icons/cg";
 import { useLocation } from 'react-router-dom';
 import imageURL from '../Utils/Scripts/imageURL';
-import { CartContext } from '../Utils/Context/AllContext';
+import { CartContext } from '../Utils/Context/allContext';
 
 function DashCard({cartInfo}) {
   console.log(cartInfo);

@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import DashCard from "../../../Components/DashCard"
-import { CartContext } from "../../../Utils/Context/AllContext"
+import { CartContext } from "../../../Utils/Context/allContext";
 
 function Cart() {
      const {totalPrice,cart,cartManager} = useContext(CartContext);
