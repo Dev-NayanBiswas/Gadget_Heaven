@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { CartContext } from "./Utils/Context/AllContext.js";
+import {CartContext} from "./Utils/Context/allContext.js"
+
 
 
 function CartContextProvider({ children }) {
