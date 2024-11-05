@@ -1,15 +1,20 @@
 import imageURL from "../Utils/Scripts/imageURL";
+import { ImHeart } from "react-icons/im";
 import { FaStar } from "react-icons/fa6";
 import { GoHeart } from "react-icons/go";
 import { BsCart3 } from "react-icons/bs";
 import { useLoaderData, useParams } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import useTitle from "../Utils/Scripts/useTitle";
-import { CartContext } from "../Utils/Context/allContext";
+import { CartContext, WishlistContext } from "../Utils/Context/allContext";
+import { toast, ToastContainer } from "react-toastify";
 
 function DetailsCard() {
   useTitle('Details')
   const {cartManager} = useContext(CartContext);
+  const {wishlist,wishlistManager} = useContext(WishlistContext);
+  const [isFavorite, setIsFavorite] = useState(false);
+
   const [product, setProduct] = useState({})
   const {ID} = useParams()
   const data = useLoaderData();
@@ -17,9 +22,14 @@ function DetailsCard() {
     const flattingData =  data?.flatMap(category => category.items);
     const seekingProduct = flattingData?.find(product => product.product_id === ID);
     setProduct({...seekingProduct});
+
+    const checkingStatus = wishlist?.find((product)=>product.product_id === ID)
+    if(checkingStatus){
+      setIsFavorite(true)
+    }
     // console.log(product);
-  },[ID,data])
-  
+  },[ID,data,wishlist])
+
 
       const {
         product_id,
@@ -33,8 +43,6 @@ function DetailsCard() {
         rating
       } = product || {}
       
-
-
 
   return (
     <>
@@ -75,11 +83,11 @@ function DetailsCard() {
                     <p className="text-gray-800 font-bold text-xl my-3">Rating :</p>
                     <section className="flex justify-start items-center gap-2">
                     <div className="flex justify-start items-center gap-1">
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
+                    <FaStar fill="gold"/>
+                    <FaStar fill="gold"/>
+                    <FaStar fill="gold"/>
+                    <FaStar fill="gold"/>
+                    <FaStar fill="gold"/>
                     
                     </div>
                     <span className="h-3 w-7 px-4 py-[10px] rounded-s-full rounded-e-full bg-gray-500/35 text-xs flex justify-center items-center font-semibold btn_anim">{rating}</span>
@@ -88,8 +96,8 @@ function DetailsCard() {
                         <section className="flex justify-start items-center gap-4">
                             <button onClick={()=>cartManager(product,"add")} className="bg-[var(--primary-color)] text-white font-semibold btn_primary flex gap-2 justify-center items-center">Add to Cart<BsCart3 style={{fontSize:'1.2rem'}}/></button>
 
-                            <button className="btn_anim p-2 rounded-full text-gray-700 bg-green-100/45 border shadow-inset-lg">
-                            <GoHeart style={{fontSize:'1.5rem'}}/>
+                            <button onClick={()=>wishlistManager(product)} className={`btn_anim p-2 rounded-full text-gray-700 ${isFavorite && "pointer-events-none"} bg-green-100/45 border shadow-inset-lg`}>
+                            {!isFavorite ? <GoHeart style={{fontSize:'1.5rem'}}/> : <ImHeart fill="red" style={{fontSize:'1.5rem'}} />}
                             </button>
                         </section>
                 </section>

@@ -64,7 +64,7 @@ function SimpleBanner({title}) {
             {location.pathname === "/dashboard/cart" && (
               <section className='buttons flex justify-center items-center gap-5'>
                 <h6 className='text-left text-gray-800/45 text-2xl'>
-                  Total Cost : $ {totalPrice}
+                  Total Cost : $ {totalPrice.toFixed(2)}
                 </h6>
                 {cart && cart.length ? <button onClick={()=>handleSortAndPurchase("sort")} className='btn_primary flex items-center justify-center gap-3 text-[var(--primary-color)] border-[1px] border-[var(--primary-color)]'>
                   Sort By Price <PiSortAscendingBold className='text-xl' />

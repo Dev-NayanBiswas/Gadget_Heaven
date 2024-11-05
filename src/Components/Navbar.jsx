@@ -2,12 +2,13 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { GoHeart } from "react-icons/go";
 import { BsCart3 } from "react-icons/bs";
 import { useContext } from "react";
-import { CartContext } from "../Utils/Context/allContext";
+import { CartContext, WishlistContext } from "../Utils/Context/allContext";
 
 
 function Navbar() {
   const location = useLocation();
-  const {totalPrice,cart,cartManager} = useContext(CartContext)
+  const {cart} = useContext(CartContext)
+  const {wishlist} = useContext(WishlistContext)
 
   const pathsArray = ["/","/productCards/Laptops","/productCards/iPhones","/productCards/Accessories","/productCards/SmartWatches","/productCards/MacBook","/productCards/Phones"]
 
@@ -41,7 +42,7 @@ function Navbar() {
           </Link>
           <Link to="/dashboard/wishList" className="btn_anim p-2 rounded-full bg-white/65 shadow-inset-lg text-black relative">
           <GoHeart/>
-          <span className="absolute -top-2 -right-2 text-sm w-5 h-5 text-white bg-red-500 rounded-full p-1 flex justify-center items-center"></span>
+          {wishlist?.length ? <span className="absolute -top-2 -right-2 text-sm w-5 h-5 text-white bg-red-500 rounded-full p-1 flex justify-center items-center">{wishlist.length}</span>:""}
           </Link>
           </section>
         </div>
