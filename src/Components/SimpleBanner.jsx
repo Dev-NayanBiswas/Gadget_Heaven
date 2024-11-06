@@ -4,7 +4,7 @@ import { NavLink, useLocation } from "react-router-dom";
 import Modal from "./Modal";
 import { CartContext } from "../Utils/Context/allContext";
 
-function SimpleBanner({title}) {
+function SimpleBanner({title,description}) {
   const [showModal, setShowModal] = useState(false)
   const {totalPrice,cart,cartManager, setCart} = useContext(CartContext)
   const location = useLocation();
@@ -29,10 +29,7 @@ function SimpleBanner({title}) {
         <h1 className='text-white text-center text-3xl font-semibold'>
           {title}
         </h1>
-        <p className='w-5/12 mx-auto text-sm text-center my-3 text-white'>
-          Explore the latest gadgets that will take your experience to the next
-          level. From smart devices to the coolest accessories, we have it all!
-        </p>
+        <p className='w-5/12 mx-auto text-sm text-center my-3 text-white'>{description}</p>
 
         {/* Only Visible on DashBoard */}
         {

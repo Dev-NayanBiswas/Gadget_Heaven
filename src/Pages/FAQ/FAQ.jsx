@@ -5,8 +5,8 @@ function FAQ() {
   useTitle("FAQ");
   return (
     <>
-      <SimpleBanner title={"FAQ"} />
-      <section className="flex flex-col gap-5">
+      <SimpleBanner title={"FAQ"} description={"Find quick answers to all things tech! Whether it’s product specifications, order tracking, returns, or troubleshooting, our FAQs make it easy to get the information you need for a smooth shopping experience on our gadget store."}/>
+      <section className="flex flex-col gap-5 my-20">
         <div className='collapse collapse-plus bg-base-200/20 border'>
           <input type='radio' name='my-accordion-2' defaultChecked />
           <div className='collapse-title font-bold text-2xl text-[var(--primary-color)]'>

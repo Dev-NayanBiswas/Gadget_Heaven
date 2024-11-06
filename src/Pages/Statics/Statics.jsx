@@ -5,7 +5,7 @@ import { useOutletContext } from "react-router-dom";
 import StaticsNav from "./StaticsNav";
 import { useEffect, useState } from "react";
 
-
+const description = "From the latest smartphones to essential computer accessories, we showcase the most sought-after products in each category. Stay informed about top-rated items, customer favorites, and seasonal bestsellers, helping you make the most informed purchase."
 
 function Statics() {
   useTitle("Statistics");
@@ -28,7 +28,7 @@ function Statics() {
   return (
     <>
       <section className='w-full py-7'>
-        <SimpleBanner title={"Statics"} />
+        <SimpleBanner title={"Statics"} description={description}/>
       </section>
       <section className="flex justify-center items-center gap-4 mb-10">
         {categories?.map((category, index) => (

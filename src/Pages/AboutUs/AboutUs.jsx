@@ -2,12 +2,17 @@ import useTitle from "../../Utils/Scripts/useTitle";
 import SimpleBanner from "../../Components/SimpleBanner";
 import imageURL from "../../Utils/Scripts/imageURL";
 
+
+
 function AboutUs() {
   useTitle("About Us");
+
+  const desc = "From smartphones to accessories, we offer a wide range of high-quality products designed to enhance your digital experience. Shop confidently with detailed product specs, reviews, and fast delivery options tailored to your needs."
+
   return (
     <>
       <section>
-        <SimpleBanner title={"AboutUs"} />
+        <SimpleBanner title={"AboutUs"} description={desc}/>
         <section className='p-6 bg-gray-500/10 flex items-center justify-center rounded-xl'>
           <figure className=' h-[50vh] w-full overflow-hidden rounded-xl'>
             <img
