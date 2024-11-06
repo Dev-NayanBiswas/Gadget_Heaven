@@ -17,7 +17,7 @@ function Banner() {
             </section>
             </section>
         </section>
-            <div className="h-[27vh]"></div>
+            <div className="h-[40vh]"></div>
     </>
   )
 }
