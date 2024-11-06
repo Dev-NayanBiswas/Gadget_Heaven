@@ -15,7 +15,7 @@ function CartContextProvider({ children }) {
         (product) => product.product_id === data.product_id,
       );
       if (checkingExistence) {
-        toast.warn(`${data.product_title} is Existed on Cart`)
+        toast.warn(`${data.product_title} Existed on Cart`)
         return;
       } else {
         if (totalPrice + data.price > 1000) {

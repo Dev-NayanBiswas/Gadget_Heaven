@@ -36,7 +36,7 @@ const routes = createBrowserRouter([
             },
             {
                 path:"statics",
-                element:<Statics/>
+                element:<Statics/>,
             },
             {
                 path:"detailsCard/:ID",
@@ -69,6 +69,7 @@ const routes = createBrowserRouter([
                 path:"FAQ",
                 element:<FAQ/>
             }
+            
         ]
     }
 ])

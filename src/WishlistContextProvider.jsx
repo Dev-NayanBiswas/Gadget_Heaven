@@ -18,7 +18,7 @@ function WishlistContextProvider({ children }) {
   function addToCart(data){
     const existedOrNot = cart?.find((product)=>product.product_id === data.product_id);
     if(existedOrNot){
-      toast.info(`${data.product_title}This item Exists on Cart`)
+      toast.info(`${data.product_title} Exists on Cart`)
         return;
     }else if(totalPrice + data.price > 1000){
       toast.error("$1000 Limit Reached")
